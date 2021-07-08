@@ -12,4 +12,3 @@ I will divide this repo into several sections to help keep things organized:
 -Python - Python scripts or code blocks that I have made or modified that help me in my day to day tasks.
 -Terraform - Terraform config files that I have learned, created or modified that I use or find interesting.
 -Certification - Learning notes or resources that I have use on studying for the certification exams.
-
