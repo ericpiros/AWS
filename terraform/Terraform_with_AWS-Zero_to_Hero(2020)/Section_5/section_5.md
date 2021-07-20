@@ -54,3 +54,25 @@ export AWS_PROFILE=<profile name>
 ```  
 Before  running any *terraform* command to do the same thing.  
 
+So with all that out of the way, for this section I just followed the instructions with 1 slight difference. As I was using SSM Session Manager to log into my instances I need to specify the role that I created in [Section 3](../Section_3/section_3.md) (terraform-ec2-role). So my *aws_instance* block looks like this:  
+
+```
+resource "aws_instance" "MyFirstEC2Instance_from_Terraform" {
+  ami = "ami-0ab4d1e9cf9a1215a"
+  instance_type = "t2.micro"
+  tags = {
+      Name = "Created from Terraform"
+  }
+  user_data = <<EOF
+            #!/bin/bash
+            yum update -y
+            yum install -y httpd
+            systemctl start httpd.service
+            systemctl enable httpd.service
+            echo "Hi Friend , I am $(hostname -f)" > /var/www/html/index.html
+            EOF
+  iam_instance_profile = "terraform-ec2-role"
+}  
+```  
+
+So at this point everything is hard coded, which is ok at this point in the course. This just serves as an introduction on what a Terrafom configuration file looks like and how to deploy your first AWS infrastructure through it.
