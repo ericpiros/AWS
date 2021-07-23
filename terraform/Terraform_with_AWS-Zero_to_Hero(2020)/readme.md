@@ -6,4 +6,6 @@ Now this will not be a word per word copy of the course. I will break down what 
 
 ## Sections  
 * [Section 3](Section_3/section_3.md)
+* [Section 5](Section_5/section_5.md)
+* [Section 6](Section_6/section_6.md)
 
