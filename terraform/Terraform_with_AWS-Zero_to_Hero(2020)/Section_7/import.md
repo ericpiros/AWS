@@ -60,4 +60,16 @@ And we see that the instance was terminated:
 
 ![Terminated Instance](screenshots/section_7_aws_console_terminated.png)
 
+Now I guess the question is what if my change causes a replacement? So I created new instance using the RedHat AMI:  
+![Red Hat Instance](screenshots/section_7_new_imported_instance.png)  
 
+I import this gain into my Terraform configuration.  
+![Terraform Import Again](screenshots/section_7_new_imported_instance_output.png)  
+
+Ok, so now lets modify our _imported_instance_ resource and specify a different AMI, then lets do a _terraform apply_ on it.  
+![Changing AMI](screenshots/section_7_replaced_instance.png)  
+
+Then if we run a _terraform refresh_ we can see that our resource is now a different instance:  
+![New Instance](screenshots/section_7_replaced_instance_id.png)  
+
+So we see that we can use the _import_ command to migrate resources created outside of Terraform into our configuration.
