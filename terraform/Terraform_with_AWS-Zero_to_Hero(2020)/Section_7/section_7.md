@@ -4,4 +4,8 @@ Now this section is the meat of the course. It is broken down into several sub-s
 
 ## Sections  
 * [Import](./import.md)
+<<<<<<< HEAD
 * [Modules]()
+=======
+* [Modules](./modules.md)
+>>>>>>> 9f54b3480226ab7fa90c0d4b6491dd02a0c51d56
