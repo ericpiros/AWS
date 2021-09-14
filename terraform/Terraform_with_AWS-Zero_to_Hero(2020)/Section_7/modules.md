@@ -37,7 +37,9 @@ module "vpc" {
   }
 }
 ```
+With the configuration above, I will be creating a VPC called **my_vpc** in **ap-southeast-1**. It will have the CIDR block **10.0.0.0/16**. It will include the **ap-southeast-1a, ap-southeast-1b and ap-southeast-1c** AZs.
 
+We will also create 3 private subnets and 3 public subnets.
 
 
 
